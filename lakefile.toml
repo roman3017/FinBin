@@ -1,0 +1,10 @@
+name = "finbin"
+version = "0.1.0"
+defaultTargets = ["finbin"]
+
+[[lean_lib]]
+name = "Finbin"
+
+[[lean_exe]]
+name = "finbin"
+root = "Main"
