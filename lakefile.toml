@@ -1,6 +1,6 @@
 name = "finbin"
 version = "0.1.0"
-defaultTargets = ["finbin"]
+defaultTargets = ["Finbin"]
 lintDriver = "batteries/runLinter"
 lintDriverArgs = ["Finbin"]
 
