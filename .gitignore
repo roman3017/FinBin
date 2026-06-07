@@ -1,1 +1,7 @@
 /.lake
+
+# leanblueprint build artifacts
+blueprint/lean_decls
+blueprint/print/
+blueprint/web/
+blueprint/src/web.paux
