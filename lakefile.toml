@@ -1,6 +1,8 @@
 name = "finbin"
 version = "0.1.0"
 defaultTargets = ["finbin"]
+lintDriver = "batteries/runLinter"
+lintDriverArgs = ["Finbin"]
 
 [[lean_lib]]
 name = "Finbin"
@@ -16,4 +18,11 @@ git = "https://github.com/PatrickMassot/checkdecls.git"
 [[require]]
 name = "«doc-gen4»"
 git = "https://github.com/leanprover/doc-gen4"
-rev = "main"
+rev = "v4.30.0"
+
+# Keep `mathlib` last so its pinned dependency versions take precedence
+# over the transitive deps pulled in by checkdecls / doc-gen4.
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "v4.30.0"
