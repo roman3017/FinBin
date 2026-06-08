@@ -12,8 +12,14 @@
 \usepackage{cleveref}
 
 
-\input{macros/common}
-\input{macros/web}
+% Theorem-like environments (each with its own counter so cleveref names
+% references correctly).
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
 
 \home{https://roman3017.github.io/FinBin}
 \github{https://github.com/roman3017/FinBin}
