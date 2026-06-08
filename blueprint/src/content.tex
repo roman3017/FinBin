@@ -11,7 +11,7 @@ $g$ of total degree at most $d$ with $j \circ f = g \circ j^k$, where $j^k$ appl
 each coordinate. These are the
 transition functions of $k$-neighbour cellular automata, and the injection $j$ is an
 enlargement of the alphabet that preserves the transitions. We prove three results, all
-verified in Lean~4 with Mathlib~\cite{Mathlib}. Every unary function $f \colon X \to X$ embeds into a
+verified in Lean~4 with Mathlib~\cite{bacik2026finbin}. Every unary function $f \colon X \to X$ embeds into a
 polynomial of total degree $1$. Every binary Kronecker delta embeds into a polynomial of
 total degree $4$. For every $d$ there is a binary function that does not embed into any
 polynomial of total degree $d$.
@@ -165,8 +165,7 @@ it gives $x = y$. Thus $m > 0$, $a \in \mathbb{Z}/m$, and $j \colon \mathbb{Z}/n
 \end{proof}
 
 An alternative proof, using the adjugate of the characteristic matrix of the functional
-graph of $f$, is given in \cite{bacik2025linear} and formally verified in
-\cite{bacik2026binlin}.
+graph of $f$, is given in \cite{bacik2025linear}.
 
 \begin{theorem}[Unary linear embedding]\label{thm:unary}
 \lean{Finbin.embedsInDegree_unary}\leanok\uses{def:embed,thm:unary-lin}
@@ -410,10 +409,10 @@ S.~Lang.
 \textit{Algebra}, Revised 3rd edition.
 Springer, 2002.
 
-\bibitem{bacik2026binlin}
+\bibitem{bacik2026finbin}
 R.~Bacik.
-BinLin.
-\url{https://github.com/roman3017/BinLin}, 2026.
+FinBin.
+\url{https://github.com/roman3017/FinBin}, 2026.
 
 \bibitem{bacik2025linear}
 R.~Bacik.

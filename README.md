@@ -11,6 +11,8 @@ universality of two-neighbour cellular automata).
 
 ## Results
 
+https://roman3017.github.io/FinBin/
+
 All statements are formalised under the `Finbin` namespace; the canonical embedding notion
 is `Finbin.EmbedsInDegree` ([Finbin/Embedding.lean](Finbin/Embedding.lean)).
 
