@@ -36,7 +36,7 @@ theorem embedsInDegree_unary {n : ℕ} [NeZero n] (f : ZMod n → ZMod n) :
 
 /-- **Degree-four embedding of binary Kronecker deltas**, in canonical form. -/
 theorem embedsInDegree_kronecker {n : ℕ} [NeZero n] (a b : ZMod n) :
-    EmbedsInDegree (fun v : Fin 2 → ZMod n => kronecker_delta n a b (v 0, v 1)) 4 := by
+    EmbedsInDegree (fun v : Fin 2 → ZMod n => kroneckerDelta n a b (v 0, v 1)) 4 := by
   obtain ⟨m, g, ⟨j, hjrep⟩, hdeg⟩ := quartic_d n a b
   refine ⟨ZMod m, inferInstance, (j : ZMod n → ZMod m), g, j.injective, hdeg, ?_⟩
   intro v
