@@ -10,7 +10,7 @@
 % It is otherwise a very minimal preamble (you should probably at least
 % add cleveref and tikz-cd).
 
-\documentclass[letter]{report}
+\documentclass[letter]{article}
 
 \usepackage{geometry}
 
@@ -24,8 +24,22 @@
 \input{macros/common}
 \input{macros/print}
 
-\title{FinBin}
-\author{roman3017}
+\usepackage{cleveref}
+
+\crefname{definition}{Definition}{Definitions}
+\Crefname{definition}{Definition}{Definitions}
+\crefname{lemma}{Lemma}{Lemmas}
+\Crefname{lemma}{Lemma}{Lemmas}
+\crefname{corollary}{Corollary}{Corollaries}
+\Crefname{corollary}{Corollary}{Corollaries}
+
+\title{Embedding Finite Functions into Low-Degree Polynomial Functions over Commutative Rings}
+\author{
+  Roman Bacik \\
+  \small Vancouver, Canada \\
+  %\small \texttt{rbacik@hotmail.com}
+}
+\date{\today}
 
 \begin{document}
 \maketitle
