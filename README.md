@@ -1,35 +1,15 @@
 # FinBin
 
-Embedding finite functions `X^k → X` into low-degree polynomial functions over commutative
-rings, with machine-checked proofs in Lean 4 (Mathlib) and an accompanying blueprint
-article.
+This repo is a formal verification of results in:
+- https://arxiv.org/abs/2606.09045
+- https://roman3017.github.io/FinBin
 
-The motivation is cellular automata: a `k`-neighbour transition function is a map
-`X^k → X`, and relabelling the alphabet by an injection `j : X → R` so that the transition
-becomes the restriction of a polynomial map leaves the dynamics unchanged (cf. Smith's
-universality of two-neighbour cellular automata).
+One can show that every unary function `X → X` on finite set can be embedded into a linear function in a possibly larger but finite commutative ring. We show this does not generalize even to binary functions. In particular for every `d` there is a binary function `X^2 → X` such that it does not embed to any polynomial of degree `d`.
 
-## Results
-
-https://roman3017.github.io/FinBin/
-
-All statements are formalised under the `Finbin` namespace; the canonical embedding notion
-is `Finbin.EmbedsInDegree` ([Finbin/Embedding.lean](Finbin/Embedding.lean)).
-
-| Result | Statement | Canonical form | Underlying theorem |
-|---|---|---|---|
-| Unary linear embedding | every `f : ZMod n → ZMod n` embeds in degree 1 | `Finbin.embedsInDegree_unary` | `Finbin.linear_representation` ([Finbin/UnaryLinear.lean](Finbin/UnaryLinear.lean)) |
-| Quartic delta embedding | every binary Kronecker delta embeds in degree 4 | `Finbin.embedsInDegree_kronecker` | `Finbin.quartic_d` ([Finbin/QuarticDelta.lean](Finbin/QuarticDelta.lean)) |
-| No low-degree embedding | for every `d`, some binary function embeds in no degree `d` | `Finbin.arbitrary_degree_obstruction` | `Finbin.thm_invp` ([Finbin/Obstruction/Quartic.lean](Finbin/Obstruction/Quartic.lean)) |
-
-The third result is witnessed by the inversion indicator `Finbin.invIndicator p` on
-`ZMod p`: for every prime `p` it embeds in no polynomial of total degree `p - 1`
-(`Finbin.not_embedsInDegree_invIndicator`), and the obstruction holds over **any** commutative
-ring. The supporting determinant/nilpotency lemmas live in
-[Finbin/Obstruction/](Finbin/Obstruction/).
-
-The article (statements, proofs, and dependency graph) is the blueprint in
-[blueprint/src/content.tex](blueprint/src/content.tex).
+The unary case has been posted and formalized here:
+- https://arxiv.org/abs/2510.20167
+- https://roman3017.github.io/FinLin
+- https://github.com/roman3017/FinLin
 
 ## Building
 
@@ -47,8 +27,8 @@ Blueprint (article PDF + web with dependency graph), requires
 [`leanblueprint`](https://github.com/PatrickMassot/leanblueprint):
 
 ```sh
-leanblueprint pdf    # blueprint/print.pdf
-leanblueprint web    # blueprint/web/
+leanblueprint all
+leanblueprint serve
 ```
 
 To check that every `\lean{}` reference resolves to an existing declaration:
